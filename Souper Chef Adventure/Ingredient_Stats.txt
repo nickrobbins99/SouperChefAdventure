@@ -1,0 +1,35 @@
+[Ingredients]
+Tomato
+	texture: 2
+	umami: 2
+	impact: 3
+	vigor: 4
+	aroma: 2
+	
+Shoe
+	texture: 1
+	umami: 1
+	impact: 4
+	vigor: 4
+	aroma: 2
+	
+Heart Chocolate
+	texture: 4
+	umami: 2
+	impact: 3
+	vigor: 4
+	aroma: 1
+	
+Lemon Grass
+	texture: 1
+	umami: 1
+	impact: 1
+	vigor: 2
+	aroma: 5
+	
+Charged Capacitor
+	texture: 2
+	umami: 1
+	impact: 5
+	vigor: 2
+	aroma: 1
