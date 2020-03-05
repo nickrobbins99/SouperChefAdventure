@@ -32,7 +32,7 @@ public class Soup : MonoBehaviour
     
     public void addItem(Item itemToAdd)
     {
-        itemList.Add(itemToAdd.name);
+        itemList.Add(itemToAdd.item_name);
         texture += itemToAdd.texture;
         umami += itemToAdd.umami;
         impact += itemToAdd.impact;

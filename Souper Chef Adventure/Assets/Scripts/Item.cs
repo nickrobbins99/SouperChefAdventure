@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public string name;
+    public string item_name;
     //qualities
-    [Range(-5.0f,5.0f)]
+    //[Range(-5.0f,5.0f)]
     public float texture;
-    [Range(-5.0f, 5.0f)]
+    //[Range(-5.0f, 5.0f)]
     public float umami;
-    [Range(-5.0f, 5.0f)]
+    //[Range(-5.0f, 5.0f)]
     public float impact;
-    [Range(-5.0f, 5.0f)]
+    //[Range(-5.0f, 5.0f)]
     public float vigor;
-    [Range(-5.0f, 5.0f)]
+    //[Range(-5.0f, 5.0f)]
     public float aroma;
 
     public float despawnTime;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         //item despawn
         despawnTime = Random.Range(30f, 50f);
