@@ -1,0 +1,50 @@
+[
+	{
+		"app_texture" : 6,
+		"app_umami" : 10,
+		"app_impact" : 6,
+		"app_vigor" : 25,
+		"app_aroma" : 22,
+		"app_decription" : "I'm in the mood for a hearty and fragrant soup. Nothing too powerful."
+	},
+	{
+		"app_texture" : 5,
+		"app_umami" : 5,
+		"app_impact" : 25,
+		"app_vigor" : 25,
+		"app_aroma" : 7,
+		"app_decription" : "I'm in the mood for something energizing. Electrifying, you could say."
+	},
+	{
+		"app_texture" : 20,
+		"app_umami" : 5,
+		"app_impact" : 30,
+		"app_vigor" : 10,
+		"app_aroma" : 5,
+		"app_decription" : "I'm in the mood for something with a lot of crunch, like chips, but in a soup."
+	},
+	{
+		"app_texture" : 10,
+		"app_umami" : 25,
+		"app_impact" : 5,
+		"app_vigor" : 16,
+		"app_aroma" : 14,
+		"app_decription" : "I'm in the mood for a savory meal."
+	},
+	{
+		"app_texture" : 6,
+		"app_umami" : 6,
+		"app_impact" : 22,
+		"app_vigor" : 14,
+		"app_aroma" : 30,
+		"app_decription" : "I'm in the mood for something that will make my nose tickle."
+	},
+	{
+		"app_texture" : 26,
+		"app_umami" : 10,
+		"app_impact" : 5,
+		"app_vigor" : 20,
+		"app_aroma" : 15,
+		"app_decription" : "I'm in the mood for something smooth. Keep the crunchy bits to a minimum!"
+	}
+]
