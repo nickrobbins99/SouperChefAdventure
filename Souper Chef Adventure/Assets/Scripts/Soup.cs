@@ -39,4 +39,13 @@ public class Soup : MonoBehaviour
         vigor += itemToAdd.vigor;
         aroma += itemToAdd.aroma;
     }
+    public void Reset()
+    {
+        itemList = new List<string>();
+        texture = 0;
+        umami = 0;
+        impact = 0;
+        vigor = 0;
+        aroma = 0;
+    }
 }

@@ -19,6 +19,7 @@ public class AppetitePicker : MonoBehaviour
     Appetite appetite;
     List<Appetite> appetites;
     public Timer timer;
+    public Soup soup;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,12 @@ public class AppetitePicker : MonoBehaviour
         string json_string = reader.ReadToEnd();
 
         appetites = JsonUtility.FromJson<List<Appetite>>(json_string);
+        
         RoundSetup();
     }
     void RoundSetup()
     {
+        soup.Reset();
         appetite = appetites[Random.Range(0, appetites.Count)];
         GetComponent<Text>().text = "The Lord's Appetite: " + appetite.description;
         timer.StartTimer();
