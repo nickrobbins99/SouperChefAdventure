@@ -19,7 +19,7 @@ public class AppetitePicker : MonoBehaviour
     Appetite appetite;
     List<Appetite> appetites;
     public Timer timer;
-    public Soup soup;
+    public Soup chef;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,20 +27,81 @@ public class AppetitePicker : MonoBehaviour
         StreamReader reader = new StreamReader(path);
         string json_string = reader.ReadToEnd();
 
-        appetites = JsonUtility.FromJson<List<Appetite>>(json_string);
+        //appetites = JsonUtility.FromJson<List<Appetite>>(json_string);
+        appetites = SetupAppetites();
         
         RoundSetup();
     }
+    List<Appetite> SetupAppetites()
+    {
+        List<Appetite> appetiteList = new List<Appetite>();
+
+        Appetite appetite1 = new Appetite();
+        appetite1.app_texture = 6;
+        appetite1.app_umami = 10;
+        appetite1.app_impact = 6;
+        appetite1.app_vigor = 25;
+        appetite1.app_aroma = 22;
+        appetite1.description = "I'm in the mood for a hearty and fragrant soup. Nothing too powerful.";
+        appetiteList.Add(appetite1);
+
+        Appetite appetite2 = new Appetite();
+        appetite2.app_texture = 5;
+        appetite2.app_umami = 5;
+        appetite2.app_impact = 25;
+        appetite2.app_vigor = 25;
+        appetite2.app_aroma = 7;
+        appetite2.description = "I'm in the mood for something energizing. Electrifying, you could say.";
+        appetiteList.Add(appetite2);
+
+        Appetite appetite3 = new Appetite();
+        appetite3.app_texture = 20;
+        appetite3.app_umami = 5;
+        appetite3.app_impact = 30;
+        appetite3.app_vigor = 10;
+        appetite3.app_aroma = 5;
+        appetite3.description = "I'm in the mood for something with a lot of crunch, like chips, but in a soup.";
+        appetiteList.Add(appetite3);
+
+        Appetite appetite4 = new Appetite();
+        appetite4.app_texture = 10;
+        appetite4.app_umami = 25;
+        appetite4.app_impact = 5;
+        appetite4.app_vigor = 16;
+        appetite4.app_aroma = 14;
+        appetite4.description = "I'm in the mood for a savory meal.";
+        appetiteList.Add(appetite4);
+
+        Appetite appetite5 = new Appetite();
+        appetite5.app_texture = 6;
+        appetite5.app_umami = 6;
+        appetite5.app_impact = 22;
+        appetite5.app_vigor = 14;
+        appetite5.app_aroma = 30;
+        appetite5.description = "I'm in the mood for something that will make my nose tickle.";
+        appetiteList.Add(appetite5);
+
+        Appetite appetite6 = new Appetite();
+        appetite6.app_texture = 26;
+        appetite6.app_umami = 10;
+        appetite6.app_impact = 5;
+        appetite6.app_vigor = 20;
+        appetite6.app_aroma = 15;
+        appetite6.description = "I'm in the mood for something smooth. Keep the crunchy bits to a minimum!";
+        appetiteList.Add(appetite6);
+
+        return appetiteList;
+
+    }
     void RoundSetup()
     {
-        soup.Reset();
+        chef.Reset();
         appetite = appetites[Random.Range(0, appetites.Count)];
-        GetComponent<Text>().text = "The Lord's Appetite: " + appetite.description;
+        GetComponent<Text>().text = appetite.description;
         timer.StartTimer();
     }
     public void GradeSoup()
     {
-        Soup chef = GameObject.Find("chef").GetComponent<Soup>();
         float chef_texture = chef.texture;
         float chef_umami = chef.umami;
         float chef_impact = chef.impact;

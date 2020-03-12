@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public int seconds;
-    public int mins;
+    public int initialSeconds;
+    public int initialMinutes;
+    private int mins;
+    private int seconds;
     public bool active;
     public AppetitePicker appetitePicker;
     // Start is called before the first frame update
@@ -17,6 +19,8 @@ public class Timer : MonoBehaviour
     }
     public void StartTimer()
     {
+        mins = initialMinutes;
+        seconds = initialSeconds;
         active = true;
         UpdateText();
         InvokeRepeating("UpdateTimer", 0f, 1f);
