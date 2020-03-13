@@ -23,9 +23,11 @@ public class AppetitePicker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         string path = "Assets/files/Appetites.json";
         StreamReader reader = new StreamReader(path);
         string json_string = reader.ReadToEnd();
+        */
 
         //appetites = JsonUtility.FromJson<List<Appetite>>(json_string);
         appetites = SetupAppetites();

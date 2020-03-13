@@ -33,7 +33,7 @@ public class CameraController : MonoBehaviour
             }
         }
         //right
-        if (Input.mousePosition.x >= Screen.width)
+        if (Input.mousePosition.x >= Screen.width - 10)
         {
             if (gameObject.transform.position.x <= rightBorder)
             {
@@ -41,7 +41,7 @@ public class CameraController : MonoBehaviour
             }
         }
         //up
-        if (Input.mousePosition.y >= Screen.height)
+        if (Input.mousePosition.y >= Screen.height - 10)
         {
             if (gameObject.transform.position.y <= upBorder)
             {

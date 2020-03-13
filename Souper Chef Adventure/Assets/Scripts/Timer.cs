@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
     {
         active = false;
         UpdateText();
+        InvokeRepeating("UpdateTimer", 0f, 1f);
     }
     public void StartTimer()
     {
@@ -23,7 +24,6 @@ public class Timer : MonoBehaviour
         seconds = initialSeconds;
         active = true;
         UpdateText();
-        InvokeRepeating("UpdateTimer", 0f, 1f);
     }
 
     // Update is called once per frame
